@@ -1,19 +1,19 @@
 
 
 
-# BugTracker - Form Consulta Bugs
+# BugTracker - Actividad Consulta Bugs
 
 
 ## 1. Clonar Repositorio (Clone/Checkout)
 
 **1.1. Ejecutar comando clone para descargar repositorio:** 
 ```sh
-$ git clone https://github.com/utn-frc-pav1-3k5-2020/actividad_bugtracker_consulta_bugs.git
+$ git clone https://github.com/utn-frc-pav1-3k5-2021/actividad_consulta_bugs
 ```
 **1.2. Ubicarse en la carpeta generada con el nombre del repositorio: 
 
 ```sh
-$ cd semana_4_bugtracker_consulta_bugs
+$ cd actividad_consulta_bugs
 ```
 
 **1.3. Crear un nuevo branch (rama)**
@@ -47,49 +47,7 @@ Solicitará ingresar los datos de la base de datos para generar una conexión, c
 Para ejecutar el script hacer click sobre el botón `Ejecutar` (o usar la tecla `F5`)
 
 
-## 3. Formulario Principal: Menú
-
-> Para continuar Abrir la solución que se encuentra en la dirección src/BugTracker.sln.
-
-La `MenuStrip` clase proporciona un sistema de menús para formularios.
-
-La `ToolStripMenuItem` clase proporciona propiedades que le permiten configurar la apariencia y la funcionalidad de un elemento de menú. Para que se muestre `ToolStripMenuItem` un objeto, debe agregarlo a un `MenuStrip`objeto
-
-
-### 3.1. Como crear un menú estándar
-
-El Diseñador de Windows Forms puede rellenar automáticamente un  [MenuStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.menustrip)  control con elementos de menú estándar.
-
-1.  Desde el  **cuadro de herramientas**, arrastre un  [MenuStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.menustrip)  control al formulario.
-    
-2.  Haga clic en el  [MenuStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.menustrip)  glifo de etiqueta inteligente del control (![glifo de etiqueta inteligente](https://docs.microsoft.com/es-es/dotnet/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) y seleccione  **insertar elementos estándar**.
-    
-    El  [MenuStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.menustrip)  control se rellena con los elementos de menú estándar.
-    
-3.  Haga clic en el  **Archivo**  elemento de menú para ver sus elementos de menú predeterminados y los iconos correspondientes.
-**![](https://lh4.googleusercontent.com/X2FSHd0WcB5z0EUsGpIr9c3h5zG_9L4WbwdfVm9DDSdNR2dzjDPV-0q1pTmCOCZKhMzrbOXnh5_RCdF6uFVq8VynYZ5c4LQb1444NTKeKwDTq6u_nxWMECNWgmcNEgGem2MN3aA0)**
-### 3.3. Elementos de un MenuStrip
-
-- MenuItem ([ToolStripMenuItem](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.toolstripmenuitem?view=netframework-4.8))
-- ComboBox ([ToolStripComboBox](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.toolstripcombobox?view=netframework-4.8))
-- TextBox ([ToolStripTextBox](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.toolstriptextbox?view=netframework-4.8))
-
-**![](https://lh6.googleusercontent.com/iN-tD4oRHPZF3kJGubFZEsHBByqVQVIfYFSFlrL_tJzhuDwbQbl1TvkLNVCL_tFQP6xTEnBP3_RDWRObmy7S1G1WBwEs_lIdhykFJhbIH1xQaF_UeP3IHIXHxZrLM6j9zFfSiqXc)**
-
-### 3.3. Como crear un control StatusStrip
-
-Use el  [StatusStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.statusstrip)  control para mostrar el estado de las aplicaciones de Windows Forms.  En el ejemplo actual, se muestran los elementos de menú seleccionados por el usuario en un  [StatusStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.statusstrip)control.
-
-1.  Desde el  **cuadro de herramientas**, arrastre un  [StatusStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.statusstrip)  control al formulario.
-    
-    El  [StatusStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.statusstrip)  control se acopla automáticamente a la parte inferior del formulario.
-    
-2.  Haga clic en el  [StatusStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.statusstrip)  del control de botón de lista desplegable y seleccione  **StatusLabel como**  para agregar un  [ToolStripStatusLabel](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.toolstripstatuslabel)  el control a la  [StatusStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.statusstrip)  control.
-
-**![](https://lh3.googleusercontent.com/BrbD9NOg2P9UDPpr-kT4skERlWwxSaZdl_OiGG4M17YdVRkNUApKYiTJIcURxLzvi-Op8v9P269GxoeQy1wiIXR6QZic-o8OVwpDfE2aXm1QOCLfdcGCaK3uT_bs3yWwCw3Gpsjc)**
-#
-
-## 4. Actividad 1: Menú de Opciones
+## Actividad: Menú de Opciones
 
 > En la clase DataManager.cs cambiar la cadena de conexión según corresponda:
 - Conexion con usuario/password:
@@ -99,7 +57,7 @@ Use el  [StatusStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows
 	
 
 
-4.1. Agregar al menú **Consultar Bugs** de **frmPrincipal**, el evento **Click()** para abrir el formulario **frmConsultaBugs**   
+1. Agregar al menú **Consultar Bugs** de **frmPrincipal**, el evento **Click()** para abrir el formulario **frmConsultaBugs**   
 ```csharp
 
         private void consultarBugsToolStripMenuItem_Click(object sender, EventArgs e)
@@ -109,7 +67,7 @@ Use el  [StatusStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows
         }
 ```
 
-4.2. Agregar al menú **Salir** de **frmPrincipal**,  el evento **Click()** que ejecute el cierre de la aplicación.
+2. Agregar al menú **Salir** de **frmPrincipal**,  el evento **Click()** que ejecute el cierre de la aplicación.
 
 ```csharp
 	    private void salirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -119,41 +77,10 @@ Use el  [StatusStrip](https://docs.microsoft.com/es-es/dotnet/api/system.windows
 
 ```
 
-## 5. Formulario ConsultaBugs
 
-### 5.1 ComboBox: Filtros Busqueda
+## Actividad: Filtros de Busqueda - ConsultaBugs
 
-En esta actividad vamos a trabajar con el formulario **frmConsultaBugs**, vamos a cargar los diferentes combos (que van a ser el filtro de búsqueda de bugs) que hay en el formulario con datos de la base de datos:
-
-
-![](https://lh3.googleusercontent.com/qkUsfmsSbcNK3_UJTJKEv5VVdTrzsIUpFQBJBfKokSElexvd53caYVj_FHBioAMGUMbLXzbQ4Vdv7sFsBG6Iep-RbcHTcS4mSpss7vsFviBgT4EzeODKKrFkuCqal7BilH6WftDH)
-
-#### ComboBox: Propiedades
-
-- **DataSource (Object):** Obtiene o establece el origen de datos de este objeto.  Entre los orígenes de datos  [BindingSource](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.bindingsource)  posibles se incluyen un enlazado a datos, una tabla de datos, una vista de datos, un conjunto de datos, un administrador de vistas de datos  [IList](https://docs.microsoft.com/es-es/dotnet/api/system.collections.ilist)  , una matriz o cualquier clase que implemente la interfaz.  Para obtener más información, vea  [orígenes de datos compatibles con Windows Forms](https://docs.microsoft.com/es-es/dotnet/framework/winforms/data-sources-supported-by-windows-forms).
-	- Si va a enlazar a una tabla (DataTable), establezca  `DisplayMember`  la propiedad en el nombre de una columna del origen de datos.
-	-  \- o -
-	- Si va a enlazar a  [IList](https://docs.microsoft.com/es-es/dotnet/api/system.collections.ilist), establezca el miembro de presentación en una propiedad pública del tipo en la lista.
-- **DisplayMember  (String):** String que especifica el nombre de una propiedad de objeto que se incluye en la colección especificada por la propiedad  DataSource.  El valor predeterminado es una cadena vacía ("").
-- **ValueMember (String):** String que representa un único nombre de la propiedad del valor de propiedad DataSource, o una jerarquía de nombres de propiedad delimitados por puntos que resuelve el nombre de una propiedad del objeto final enlazado a datos.  El valor predeterminado es una cadena vacía ("").
-- **SelectedIndex (Int32):** Obtiene o establece el índice que especifica el elemento seleccionado actualmente. Índice de base cero del elemento actualmente seleccionado.  Si no hay ningún elemento seleccionado, se devuelve el valor uno negativo (-1).
-- **SelectedItem (Object):** Obtiene o establece el elemento seleccionado actualmente en el elemento  ComboBox.
-- **SelectedText (String):** Obtiene o establece el texto que se selecciona en la parte de un  ComboBox que se puede editar.
-- **SelectedValue (Object):** Obtiene o establece el valor de la propiedad miembro especificada por la propiedad  ValueMember.
-
-
-> En el siguiente link podemos encontrar la definición de este control:
-> [https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.combobox?view=netframework-4.8#propiedades](https://docs.microsoft.com/es-es/dotnet/api/system.windows.forms.combobox?view=netframework-4.8#propiedades)
-
-### 5.2 DataGridView: Grilla resultados
-
-Con el DataGridView control, puede mostrar y editar los datos tabulares de muchos tipos diferentes de orígenes de datos.
-
-**Enlazar datos** al DataGridView control es sencillo e intuitivo y, en muchos casos, es tan sencillo como establecer la **DataSource** propiedad. Se enlazar a un origen de datos como una lista o una tabla.
-
-## 6. Actividad 2: Filtros de Busqueda - ConsultaBugs
-
-6.1 En la clase **frmConsultaBugs** agregar el método LlenarCombo, para generalizar lógica que completa los ComboBox con datos para que luego pueden ser seleccionados por el usuario:
+1 En la clase **frmConsultaBugs** agregar el método LlenarCombo, para generalizar lógica que completa los ComboBox con datos para que luego pueden ser seleccionados por el usuario:
 
 ```csharp
 	private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
@@ -168,7 +95,7 @@ Con el DataGridView control, puede mostrar y editar los datos tabulares de mucho
             cbo.SelectedIndex = -1;
         }
 ```
-6.2. Agregar al formulario el evento **Load()** (que se dispara al abrir el formulario), y en dicho evento se procederá a cargar los combos de la siguiente forma:
+2. Agregar al formulario el evento **Load()** (que se dispara al abrir el formulario), y en dicho evento se procederá a cargar los combos de la siguiente forma:
 ```csharp
         private void frmBugs_Load(object sender, EventArgs e)
         {
@@ -187,7 +114,7 @@ Con el DataGridView control, puede mostrar y editar los datos tabulares de mucho
 ```
 ## 6. Consultar Bugs
 
-6.1. Agregar al botón **Consultar** el evento **Click()**, para que construya la consulta sql que busque los bugs registrados en la base de datos, con los filtros cargados en el formulario:
+1. Agregar al botón **Consultar** el evento **Click()**, para que construya la consulta sql que busque los bugs registrados en la base de datos, con los filtros cargados en el formulario:
 
 > Clase **Dictionary<TKey,TValue>**: Representa una colección de claves (TKey) y valores (TValue).
 
