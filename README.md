@@ -147,26 +147,7 @@ Para ejecutar el script hacer click sobre el botón `Ejecutar` (o usar la tecla 
                 parametros.Add("idUsuarioAsignado", asignadoA);
             }
 
-            if (!string.IsNullOrEmpty(cboPrioridades.Text))
-            {
-                var prioridad = cboPrioridades.SelectedValue.ToString();
-                strSql += "AND (id_prioridad=@idPrioridad) ";
-                parametros.Add("idPrioridad", prioridad);
-            }
-
-            if (!string.IsNullOrEmpty(cboCriticidades.Text))
-            {
-                var criticidad = cboCriticidades.SelectedValue.ToString();
-                strSql += "AND (id_criticidad=@idCriticidad) ";
-                parametros.Add("idCriticidad", criticidad);
-            }
-
-            if (!string.IsNullOrEmpty(cboProductos.Text))
-            {
-                var producto = cboProductos.SelectedValue.ToString();
-                strSql += "AND (id_producto=@idProducto) ";
-                parametros.Add("idProducto", producto);
-            }
+            //Completar el resto de las validaciones
 
             strSql += " ORDER BY fecha_alta DESC";
             dgvBugs.DataSource = DataManager.GetInstance().ConsultaSQL(strSql, parametros);
