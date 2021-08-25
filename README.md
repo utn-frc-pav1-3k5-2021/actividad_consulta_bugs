@@ -50,10 +50,8 @@ Para ejecutar el script hacer click sobre el botón `Ejecutar` (o usar la tecla 
 ## 3. Actividad: Menú de Opciones
 
 > En la clase DataManager.cs cambiar la cadena de conexión según corresponda:
-- Conexion con usuario/password:
-	- Data Source=maquis;Initial Catalog=BugTracker;User ID=avisuales1;Password=*******
-- Conexión a través de windows:
-	- Data Source=maquis;Initial Catalog=BugTracker;Integrated Security=true;
+- Ejemplo de cadena de conexión a través de windows:
+	- Data Source=.\\SQLEXPRESS;Initial Catalog=BugTracker;Integrated Security=true;
 	
 
 
