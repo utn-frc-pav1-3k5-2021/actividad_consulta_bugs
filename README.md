@@ -47,7 +47,7 @@ Solicitará ingresar los datos de la base de datos para generar una conexión, c
 Para ejecutar el script hacer click sobre el botón `Ejecutar` (o usar la tecla `F5`)
 
 
-## Actividad: Menú de Opciones
+## 3. Actividad: Menú de Opciones
 
 > En la clase DataManager.cs cambiar la cadena de conexión según corresponda:
 - Conexion con usuario/password:
@@ -78,7 +78,7 @@ Para ejecutar el script hacer click sobre el botón `Ejecutar` (o usar la tecla 
 ```
 
 
-## Actividad: Filtros de Busqueda - ConsultaBugs
+## 4. Actividad: Filtros de Busqueda - ConsultaBugs
 
 1 En la clase **frmConsultaBugs** agregar el método LlenarCombo, para generalizar lógica que completa los ComboBox con datos para que luego pueden ser seleccionados por el usuario:
 
@@ -112,7 +112,7 @@ Para ejecutar el script hacer click sobre el botón `Ejecutar` (o usar la tecla 
 
         }
 ```
-## 6. Consultar Bugs
+## 5. Actividad: Consultar Bugs
 
 1. Agregar al botón **Consultar** el evento **Click()**, para que construya la consulta sql que busque los bugs registrados en la base de datos, con los filtros cargados en el formulario:
 
@@ -181,35 +181,35 @@ Para ejecutar el script hacer click sobre el botón `Ejecutar` (o usar la tecla 
         }
 ```
 
-## 7. Versionar los cambios locales (add / commit / push)
+## 6. Versionar los cambios locales (add / commit / push)
 
 > A continuación vamos a crear el **commit** y subir los cambios al servidor GitHub.
 
-7.1. **Status**. Verificamos los cambios pendientes de versionar.
+1. **Status**. Verificamos los cambios pendientes de versionar.
 
 ```sh
 $ git status
 ```
 
-7.2. **Add** Agregamos todos los archivos nuevos no versionados.
+2. **Add** Agregamos todos los archivos nuevos no versionados.
 
 ```sh
 $ git add -A
 ```
 
-7.3. **Commit** Generamos un commit con todos los cambios y agregamos un comentario.
+3. **Commit** Generamos un commit con todos los cambios y agregamos un comentario.
 
 ```sh
 $ git commit -a -m "Comentario"
 ```
 
-7.4. **Push** Enviamos todos los commits locales a GitHub
+4. **Push** Enviamos todos los commits locales a GitHub
 
 ```sh
 $ git push
 ```
 
-7.5. **Status** Verificar que no quedaron cambios pendientes de versionar
+5. **Status** Verificar que no quedaron cambios pendientes de versionar
 
 ```sh
 $ git status
