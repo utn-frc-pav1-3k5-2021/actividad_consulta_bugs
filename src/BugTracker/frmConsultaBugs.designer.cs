@@ -75,6 +75,7 @@
             this.pnl_filtros.TabIndex = 1;
             this.pnl_filtros.TabStop = false;
             this.pnl_filtros.Text = "Filtros";
+            this.pnl_filtros.Enter += new System.EventHandler(this.pnl_filtros_Enter);
             // 
             // cboProductos
             // 

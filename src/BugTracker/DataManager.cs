@@ -10,7 +10,7 @@ public class DataManager
     private static DataManager instance;
     public DataManager()
     {
-        string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=BugTracker;Integrated Security=true;";
+        string_conexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=PAVI-TP-2021;Integrated Security=true;";
     }
 
     // Con el siguiente método aplicamos el patrón singleton
@@ -32,6 +32,7 @@ public class DataManager
     ///          El error de conexión se produce:
     ///              a) durante la apertura de la conexión
     ///              b) durante la ejecución del comando.
+    /// El metodo Dictionary representa una colleccion de keys y valores. 
     public DataTable ConsultaSQL(string strSql, Dictionary<string, object> prs = null)
     {
 
