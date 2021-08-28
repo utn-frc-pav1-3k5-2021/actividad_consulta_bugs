@@ -32,13 +32,17 @@ namespace BugTracker
                 e.Cancel = true;
         }
 
-        private void consultarBugsToolStripMenuItem_Click(object sender, EventArgs e)
+     
+
+        private void consultaStripMenuItem_Click(object sender, EventArgs e)
         {
-        
+            frmConsultaBugs frmDetalle = new frmConsultaBugs();
+            frmDetalle.ShowDialog();
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Close();
         }
     }
 }
