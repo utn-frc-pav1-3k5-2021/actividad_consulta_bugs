@@ -16,19 +16,7 @@ namespace BugTracker
         {
             InitializeComponent();
         }
-
-        private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
-        {
-            // Datasource: establece el origen de datos de este objeto.
-            cbo.DataSource = source;
-            // DisplayMember: establece la propiedad que se va a mostrar(el nombre) para este ListControl.
-            cbo.DisplayMember = display;
-            // ValueMember: establece la ruta de acceso de la propiedad que se utilizará como valor real para los elementos de ListControl.
-            cbo.ValueMember = value;
-            //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
-            cbo.SelectedIndex = -1;
-        }
-
+           
         private void frmBugs_Load(object sender, EventArgs e)
         {
 
@@ -44,6 +32,18 @@ namespace BugTracker
 
         }
 
+        private void LlenarCombo(ComboBox cbo, Object source, string display, String value)
+        {
+            // Datasource: establece el origen de datos de este objeto.
+            cbo.DataSource = source;
+            // DisplayMember: establece la propiedad que se va a mostrar(el nombre) para este ListControl.
+            cbo.DisplayMember = display;
+            // ValueMember: establece la ruta de acceso de la propiedad que se utilizará como valor real para los elementos de ListControl.
+            cbo.ValueMember = value;
+            //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
+            cbo.SelectedIndex = -1;
+        }
+
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             string strSql = "SELECT TOP 20 * FROM bugs WHERE 1=1 ";
@@ -51,12 +51,19 @@ namespace BugTracker
 
             DateTime fechaDesde;
             DateTime fechaHasta;
-            if (DateTime.TryParse(txtFechaDesde.Text, out fechaDesde) &&
+            if (DateTime.TryParse(txtFechaDesde.Text, out fechaDesde))
+            {
+                strSql += " AND fecha_alta>=@fechaDesde ";
+                parametros.Add("fechaDesde", fechaDesde);
+              
+            }
+
+            if (
                 DateTime.TryParse(txtFechaHasta.Text, out fechaHasta))
             {
-                strSql += " AND (fecha_alta>=@fechaDesde AND fecha_alta<=@fechaHasta) ";
-                parametros.Add("fechaDesde", txtFechaDesde.Text);
-                parametros.Add("fechaHasta", txtFechaHasta.Text);
+                strSql += " AND  fecha_alta<=@fechaHasta ";
+               
+                parametros.Add("fechaHasta", fechaHasta);
             }
 
 

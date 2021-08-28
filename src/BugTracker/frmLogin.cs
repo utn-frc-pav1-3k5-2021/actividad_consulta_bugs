@@ -28,24 +28,25 @@ namespace BugTracker
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             //Validamos que se haya ingresado un usuario.
-            if ((txtUsuario.Text == ""))
-            {
-                MessageBox.Show("Se debe ingresar un usuario.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+            //if ((txtUsuario.Text == ""))
+            //{
+            //   MessageBox.Show("Se debe ingresar un usuario.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //  return;
+            //}
 
             //Validamos que se haya ingresado una password
-            if ((txtPassword.Text == ""))
-            {
-                MessageBox.Show("Se debe ingresar una contraseña.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
-            }
+            //if ((txtPassword.Text == ""))
+            //{
+            //  MessageBox.Show("Se debe ingresar una contraseña.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            //return;
+            //}
 
             //Controlamos que las creadenciales sean las correctas. 
-            if (ValidarCredenciales(txtUsuario.Text, txtPassword.Text))
+            // if (ValidarCredenciales(txtUsuario.Text, txtPassword.Text))
+            if (true)
             {
                 // Mostramos un mensaje afirmativo en caso de que el usuario sea valido.
-                MessageBox.Show("Usted a ingresado al sistema.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Usted a ingresado al sistema.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
