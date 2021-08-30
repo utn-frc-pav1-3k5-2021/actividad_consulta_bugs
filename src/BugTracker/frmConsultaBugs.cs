@@ -19,6 +19,66 @@ namespace BugTracker
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
+            string strSql = "SELECT TOP 20 * FROM bugs WHERE 1=1";
+            Dictionary<string, object> parametros = new Dictionary<string, object>();
+
+            DateTime fecheDesde;
+            DateTime fechaHasta;
+
+            //DateTime.tryParse Intenta transformar una fecha en formato string a DateTime y si puede, devuelve true
+            if(DateTime.TryParse(txtFechaDesde.Text, out fecheDesde) && DateTime.TryParse(txtFechaHasta.Text, out fechaHasta)) {
+
+                strSql += " AND (fecha_alta>=@fechaDesde AND fecha_alta<=@fechaHasta) ";
+                parametros.Add("fechaDesde", txtFechaDesde.Text);
+                parametros.Add("fechaHasta", txtFechaHasta.Text);
+            }
+
+            //Chequeo de combos
+            if (!string.IsNullOrEmpty(cboEstados.Text)) {
+                var idEstado = cboEstados.SelectedValue.ToString();
+                strSql += " AND id_estado=@idEstado ";
+                parametros.Add("idEstado", idEstado);
+            }
+
+            if (!string.IsNullOrEmpty(cboAsignadoA.Text))
+            {
+                var idAsignacion = cboAsignadoA.Text.ToString();
+                strSql += " AND id_usuario_asignado=@idAsignacion ";
+                parametros.Add("idAsignacion", idAsignacion);
+            }
+
+            if (!string.IsNullOrEmpty(cboPrioridades.Text))
+            {
+                var idPrioridad = cboPrioridades.SelectedValue.ToString();
+                strSql += " AND id_prioridad=@idPrioridad ";
+                parametros.Add("idPrioridad", idPrioridad);
+            }
+
+            if (!string.IsNullOrEmpty(cboCriticidades.Text))
+            {
+                var idCriticidad = cboCriticidades.SelectedValue.ToString();
+                strSql += " AND id_criticidad=@idCriticidad ";
+                parametros.Add("idCriticidad", idCriticidad);
+            }
+
+            if (!string.IsNullOrEmpty(cboProductos.Text))
+            {
+                var idProducto = cboProductos.SelectedValue.ToString();
+                strSql += " AND id_producto=@idProducto ";
+                parametros.Add("idProducto", idProducto);
+            }
+
+            strSql += " ORDER BY fecha_alta DESC";
+
+            //Cargar DataGridView con el dataSource de la consulta
+
+            dgvBugs.DataSource = DataManager.GetInstance().ConsultaSQL(strSql, parametros);
+
+            if (dgvBugs.Rows.Count == 0)
+            {
+                MessageBox.Show("No se encontraron coincidencias para el/los filtros ingresados", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
 
         }
 
