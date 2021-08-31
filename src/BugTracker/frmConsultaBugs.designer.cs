@@ -247,6 +247,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmConsultaBugs";
             this.Text = "Consultar Bugs";
+            this.Load += new System.EventHandler(this.frmBugs_Load);
             this.pnl_filtros.ResumeLayout(false);
             this.pnl_filtros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBugs)).EndInit();
