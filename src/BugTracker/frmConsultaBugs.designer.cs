@@ -134,6 +134,7 @@
             this.txtFechaDesde.Size = new System.Drawing.Size(210, 23);
             this.txtFechaDesde.TabIndex = 9;
             this.txtFechaDesde.ValidatingType = typeof(System.DateTime);
+            this.txtFechaDesde.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtFechaDesde_MaskInputRejected);
             // 
             // cboCriticidades
             // 
@@ -211,6 +212,7 @@
             this.cboEstados.Name = "cboEstados";
             this.cboEstados.Size = new System.Drawing.Size(210, 23);
             this.cboEstados.TabIndex = 1;
+            this.cboEstados.SelectedIndexChanged += new System.EventHandler(this.cboEstados_SelectedIndexChanged);
             // 
             // lbl_estado
             // 
@@ -247,6 +249,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmConsultaBugs";
             this.Text = "Consultar Bugs";
+            this.Load += new System.EventHandler(this.frmConsultaBugs_Load);
             this.pnl_filtros.ResumeLayout(false);
             this.pnl_filtros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBugs)).EndInit();
