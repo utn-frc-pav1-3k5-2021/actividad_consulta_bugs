@@ -45,6 +45,7 @@
             this.cboEstados = new System.Windows.Forms.ComboBox();
             this.lbl_estado = new System.Windows.Forms.Label();
             this.dgvBugs = new System.Windows.Forms.DataGridView();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.pnl_filtros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBugs)).BeginInit();
             this.SuspendLayout();
@@ -237,20 +238,31 @@
             this.dgvBugs.Size = new System.Drawing.Size(1050, 361);
             this.dgvBugs.TabIndex = 6;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Location = new System.Drawing.Point(0, 534);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(1080, 22);
+            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
             // frmConsultaBugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1080, 556);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dgvBugs);
             this.Controls.Add(this.pnl_filtros);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmConsultaBugs";
             this.Text = "Consultar Bugs";
+            this.Load += new System.EventHandler(this.frmConsultaBugs_Load);
             this.pnl_filtros.ResumeLayout(false);
             this.pnl_filtros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBugs)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -273,6 +285,6 @@
         internal System.Windows.Forms.ComboBox cboEstados;
         internal System.Windows.Forms.Label lbl_estado;
         internal System.Windows.Forms.DataGridView dgvBugs;
-
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }

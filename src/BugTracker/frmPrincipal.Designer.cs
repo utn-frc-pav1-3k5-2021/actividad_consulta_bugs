@@ -61,19 +61,19 @@
             // consultarBugsToolStripMenuItem
             // 
             this.consultarBugsToolStripMenuItem.Name = "consultarBugsToolStripMenuItem";
-            this.consultarBugsToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.consultarBugsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultarBugsToolStripMenuItem.Text = "Consultar Bugs";
             this.consultarBugsToolStripMenuItem.Click += new System.EventHandler(this.consultarBugsToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(151, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
