@@ -30,8 +30,8 @@ namespace BugTracker
                 DateTime.TryParse(txtFechaHasta.Text, out fechaHasta))
             {
                 strSql += " AND (fecha_alta>=@fechaDesde AND fecha_alta<=@fechaHasta) ";
-                parametros.Add("fechaDesde", txtFechaDesde.Text);
-                parametros.Add("fechaHasta", txtFechaHasta.Text);
+                parametros.Add("fechaDesde", fechaDesde);
+                parametros.Add("fechaHasta", fechaHasta);
             }
 
 

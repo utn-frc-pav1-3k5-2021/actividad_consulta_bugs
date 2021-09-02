@@ -22,6 +22,7 @@ public class DataManager
         return instance;
     }
 
+
     /// Resumen:
     ///      Se utiliza para sentencias SQL del tipo “Select” con parámetros recibidos desde la interfaz
     ///      La función recibe por valor una sentencia sql como string y un diccionario de objetos como parámetros
