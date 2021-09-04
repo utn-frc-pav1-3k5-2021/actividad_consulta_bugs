@@ -21,5 +21,10 @@ namespace BugTracker
         {
 
         }
+
+        private void dgvBugs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

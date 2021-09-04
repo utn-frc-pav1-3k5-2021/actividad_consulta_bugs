@@ -234,14 +234,16 @@
             this.dgvBugs.Name = "dgvBugs";
             this.dgvBugs.ReadOnly = true;
             this.dgvBugs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBugs.Size = new System.Drawing.Size(1050, 361);
+            this.dgvBugs.Size = new System.Drawing.Size(1047, 361);
             this.dgvBugs.TabIndex = 6;
+            this.dgvBugs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBugs_CellContentClick);
+            this.dgvBugs.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // frmConsultaBugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 556);
+            this.ClientSize = new System.Drawing.Size(1077, 556);
             this.Controls.Add(this.dgvBugs);
             this.Controls.Add(this.pnl_filtros);
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
