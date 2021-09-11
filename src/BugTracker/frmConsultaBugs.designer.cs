@@ -1,4 +1,7 @@
-﻿namespace BugTracker
+﻿using System;
+using System.Windows.Forms;
+
+namespace BugTracker
 {
     partial class frmConsultaBugs
     {
@@ -19,6 +22,20 @@
             }
             base.Dispose(disposing);
         }
+
+        private void llenarComboBox(ComboBox cbo, Object source, string display, String value)
+        {
+            //Establece cual es el origen de datos del objeto.
+            cbo.DataSource = source;
+            //Establece la propiedad que se va a mostrar en el listado de control.
+            cbo.DisplayMember = display;
+            //Establece el valor numerico que se mostrara en el combo, como un codigo.
+            cbo.ValueMember = value;
+            //SelectedIndex: establece el índice que especifica el elemento seleccionado actualmente.
+            cbo.SelectedIndex = -1;
+        }
+
+
 
         #region Windows Form Designer generated code
 
@@ -249,6 +266,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmConsultaBugs";
             this.Text = "Consultar Bugs";
+            this.Load += new System.EventHandler(this.frmConsultaBugs_Load);
             this.pnl_filtros.ResumeLayout(false);
             this.pnl_filtros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBugs)).EndInit();
