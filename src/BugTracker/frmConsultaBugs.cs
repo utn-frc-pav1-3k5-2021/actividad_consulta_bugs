@@ -48,6 +48,26 @@ namespace BugTracker
             }
 
             //Completar el resto de las validaciones
+            if (!string.IsNullOrEmpty(cboCriticidades.Text))
+            {
+                var asignadoA = cboCriticidades.SelectedValue.ToString();
+                strSql += "AND (id_criticidad=@idCriticidad) ";
+                parametros.Add("idCriticidad", asignadoA);
+            }
+
+            if (!string.IsNullOrEmpty(cboPrioridades.Text))
+            {
+                var asignadoA = cboPrioridades.SelectedValue.ToString();
+                strSql += "AND (id_prioridad=@idPrioridad) ";
+                parametros.Add("idPrioridad", asignadoA);
+            }
+
+            if (!string.IsNullOrEmpty(cboProductos.Text))
+            {
+                var asignadoA = cboProductos.SelectedValue.ToString();
+                strSql += "AND (id_producto=@idProducto) ";
+                parametros.Add("idProducto", asignadoA);
+            }
 
             strSql += " ORDER BY fecha_alta DESC";
             dgvBugs.DataSource = DataManager.GetInstance().ConsultaSQL(strSql, parametros);
