@@ -34,11 +34,14 @@ namespace BugTracker
 
         private void consultarBugsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        
+            frmConsultaBugs frmDetalle = new frmConsultaBugs();
+            frmDetalle.ShowDialog();
+            
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Close();
         }
     }
 }
